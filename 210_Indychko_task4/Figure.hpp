@@ -24,6 +24,9 @@ public:
     virtual double GetSquare();
 };
 
+class Triangle : public Figure {
+    
+};
 
 
 #endif
