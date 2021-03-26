@@ -2,7 +2,7 @@
 #define Figure_hpp
 
 class Figure {
-protected:
+private:
     double x_center;
     double y_center;
 public:
@@ -13,7 +13,7 @@ public:
 };
 
 class Circle : public Figure {
-protected:
+private:
     double radius;
 public:
     Circle(double _x = 0, double _y = 0, double _rad = 1);
@@ -23,8 +23,8 @@ public:
 };
 
 class Square : public Figure {
-protected:
-    double x_A;
+private:
+    double x_A; /// A is the top right corner
     double y_A;
     double side_length;
 public:
@@ -36,9 +36,9 @@ public:
 
 ///Equilateral triangle
 class Triangle : public Figure {
-protected:
+private:
     double x_A;
-    double x_B;
+    double y_A;
     double inscr_rad;
 public:
     Triangle(double _x = 0, double _y = 0, double _x_A = 0, double _y_A = 2, double _rad = 1);
