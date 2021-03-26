@@ -43,5 +43,3 @@ void Triangle::Increase(double k) {
     x_A *= k;
     y_A *= k;
 }
-
-double
