@@ -12,6 +12,8 @@ public:
     virtual double GetSquare() = 0;
 };
 
+/*///////////////////////////////////*/
+
 class Circle : public Figure {
 private:
     double radius;
@@ -22,9 +24,12 @@ public:
     virtual double GetSquare();
 };
 
+/*///////////////////////////////////*/
+
 class Square : public Figure {
 private:
-    double x_A; /// A is the top right corner
+    ///A is the top right corner
+    double x_A;
     double y_A;
     double side_length;
 public:
@@ -33,6 +38,8 @@ public:
     virtual void Increase(double k);
     virtual double GetSquare();
 };
+
+/*///////////////////////////////////*/
 
 ///Equilateral triangle
 class Triangle : public Figure {
@@ -45,6 +52,22 @@ public:
     ~Triangle();
     virtual void Increase(double k);
     virtual double GetSquare();
+};
+
+/*///////////////////////////////////*/
+
+class Draft {
+private:
+    int size;
+    int current_size;
+    Figure** arr;
+public:
+    Draft(int _size = 0);
+    ~Draft();
+    void AddFigure(Figure* _figure);
+    void DeleteFigure(int pos);
+    void Increase(double k);
+    double GetSquare();
 };
 
 #endif
