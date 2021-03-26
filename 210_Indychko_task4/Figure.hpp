@@ -24,9 +24,29 @@ public:
     virtual double GetSquare();
 };
 
-class Triangle : public Figure {
-    
+class Square : public Figure {
+protected:
+    double x_A;
+    double y_A;
+    double side_length;
+public:
+    Square(double _x = 0, double _y = 0, double _x_A = 0.5, double _y_A = 0.5, double _side = 1);
+    ~Square();
+    virtual void Increase(double k);
+    virtual double GetSquare();
 };
 
+///Equilateral triangle
+class Triangle : public Figure {
+protected:
+    double x_A;
+    double x_B;
+    double inscr_rad;
+public:
+    Triangle(double _x = 0, double _y = 0, double _x_A = 0, double _y_A = 2, double _rad = 1);
+    ~Triangle();
+    virtual void Increase(double k);
+    virtual double GetSquare();
+};
 
 #endif
