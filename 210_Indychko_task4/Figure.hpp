@@ -1,8 +1,6 @@
 #ifndef Figure_hpp
 #define Figure_hpp
 
-#include <stdio.h>
-
 class Figure {
 protected:
     double x_center;
